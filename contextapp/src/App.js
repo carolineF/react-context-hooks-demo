@@ -1,8 +1,18 @@
 import React from 'react';
+import BookList from './components/BookList';
+import Navbar from './components/Navbar';
+import ThemeContextProvider from './contexts/ThemeContext';
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   return (
-   <div></div>
+    <div className="App">
+      <ThemeContextProvider>
+        <Navbar />
+        <BookList />
+        <ThemeToggle />
+      </ThemeContextProvider>
+    </div>
   );
 }
 
